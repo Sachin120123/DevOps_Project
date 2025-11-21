@@ -1,21 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  name: first-project
   labels:
-    app: node-app
+    app: prod
 spec:
-  replicas: 2 
+  replicas: 5
   selector:
     matchLabels:
-      app: node-app
+      app: prod
   template:
     metadata:
       labels:
-        app: node-app 
+        app: prod
     spec:
       containers:
-      - name: node-app 
-        image: pdockersavant/nodejs-app:latest 
+      - name: container1
+        image: sachinchauhan9527/novmonth-image
         ports:
-        - containerPort: 3000 
+        - containerPort: 5000
+~
+
