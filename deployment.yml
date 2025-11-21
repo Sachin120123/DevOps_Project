@@ -18,4 +18,4 @@ spec:
       - name: nodejs-container
         image: sachinchauhan9527/novmonth-image:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
