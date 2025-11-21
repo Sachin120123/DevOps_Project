@@ -1,23 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: first-project
+  name: node-app-deployment
   labels:
-    app: prod
+    app: node-app
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
-      app: prod
+      app: node-app
   template:
     metadata:
       labels:
-        app: prod
+        app: node-app
     spec:
       containers:
-      - name: container1
-        image: sachinchauhan9527/novmonth-image
+      - name: nodejs-container
+        image: sachinchauhan9527/novmonth-image:latest
         ports:
         - containerPort: 5000
-~
-
